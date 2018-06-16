@@ -1,0 +1,126 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>WebTileLayer - 4.5</title>
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .leaflet-control-color-scale {
+      font-family: Source Sans Pro, sans-serif;
+      font-size: 10px;
+      background: #fff;
+      color: #777;
+      box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .5);
+      border-radius: 5px;
+      padding: 0;
+      height: 26px
+    }
+    .leaflet-control-color-scale-line {
+      margin: 15px 5px 5px;
+      position: inherit;
+      height: 5px;
+      border-top: 1px solid #777;
+      border-bottom: 1px solid #777
+    }
+    .scale-value {
+      position: absolute;
+      display: inline;
+      bottom: 0;
+      height: 16px;
+      vertical-align: top
+    }
+    .scale-value span {
+      line-height: 100%;
+      vertical-align: top
+    }
+    .scale-value:not(:last-of-type) {
+      border-left: 1px solid #777
+    }
+    .scale-value:last-of-type {
+      border-right: 1px solid #777
+    }
+    .scale-min-value {
+      left: 0
+    }
+    .scale-max-value {
+      right: 0
+    }
+    .leaflet-control {
+      position: relative;
+      z-index: 7;
+      pointer-events: auto
+    }
+    .leaflet-control {
+      float: left;
+      clear: both
+    }
+    .leaflet-right .leaflet-control {
+      float: right
+    }
+    .leaflet-bottom .leaflet-control {
+      margin-bottom: 10px
+    }
+    .leaflet-right .leaflet-control {
+      margin-right: 10px
+    }
+  </style>
+  <link rel="stylesheet" href="http://js.arcgis.com/4.5/esri/css/main.css">
+  <script src="http://js.arcgis.com/4.5/"></script>
+  <script>
+    var tiledLayer;
+    require([
+      "esri/config",
+      "esri/layers/WebTileLayer",
+      "esri/Map",
+      "esri/views/MapView",
+      "dojo/dom",
+      "dojo/domReady!"
+    ], function(esriConfig, WebTileLayer, Map, MapView, dom) {
+      esriConfig.request.corsEnabledServers
+        .push("a.tile.openweathermap.org", "b.tile.openweathermap.org", "c.tile.openweathermap.org", "d.tile.openweathermap.org");
+      var map = new Map({
+        basemap: "dark-gray"
+      });
+      var view = new MapView({
+        container: "viewDiv",
+        map: map
+      });
+      tiledLayer = new WebTileLayer({
+        urlTemplate: "http://{subDomain}.tile.openweathermap.org/map/temp_new/{level}/{col}/{row}.png?appid=YOURAPIKEY",
+        subDomains: ["a", "b", "c", "d"]
+         });
+  console.log({level});
+ 
+      map.add(tiledLayer);
+    });
+  </script>
+</head>
+
+<body>
+  <div id="viewDiv">
+    <div class="leaflet-bottom leaflet-right">
+      <div class="leaflet-control-color-scale leaflet-control" style="display: block; background: none; box-shadow: none; border-width: 0px;">
+        <div class="leaflet-control-color-scale-line" style="width: 300px; background-image: none; position: relative; bottom: 65px; right: -15px; border-width: 0px;">
+          <div class="leaflet-control-color-scale leaflet-control" style="display: block; width: 360px;">
+            <div class="scale-value" style="margin-left: 10px;border:0"><span>Temp</span></div>
+            <div class="leaflet-control-color-scale-line" style="background-image: linear-gradient(to right, rgb(159, 85, 181) 0%, rgb(44, 106, 187) 8.75%, rgb(82, 139, 213) 12.5%, rgb(103, 163, 222) 18.75%, rgb(142, 202, 240) 25%, rgb(155, 213, 244) 31.25%, rgb(172, 225, 253) 37.5%, rgb(194, 234, 255) 43.75%, rgb(255, 255, 208) 50%, rgb(254, 248, 174) 56.25%, rgb(254, 232, 146) 62.5%, rgb(254, 226, 112) 68.75%, rgb(253, 212, 97) 75%, rgb(244, 168, 94) 82.5%, rgb(244, 129, 89) 87.5%, rgb(244, 104, 89) 93.75%, rgb(244, 76, 73) 100%); width: 300px; float: right;">
+              <div class="scale-value scale-min-value"><span> -40 °C </span></div>
+              <div class="scale-value scale-avg-value" style="left:50%"><span> 0 °C </span></div>
+              <div class="scale-value scale-max-value"><span> 40 °C </span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
