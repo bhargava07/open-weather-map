@@ -1,0 +1,165 @@
+{
+    "api": "",
+    "cities" : [{
+                  "id": 5095445,
+                  "name": "Bayonne",
+                  "country": "US",
+                  "coord": {
+                    "lon": -74.114311,
+                    "lat": 40.668709
+                  }
+                },
+                {
+                  "id": 2643743,
+                  "name": "London",
+                  "country": "GB",
+                  "coord": {
+                    "lon": -0.12574,
+                    "lat": 51.50853
+                  }
+				  {
+				"id": 3034366,
+				"name": "Beauchamps",
+				"country": "FR",
+				"coord": {
+				  "lon": 1.51764,
+				  "lat": 50.01202
+				}
+			  },
+			  {
+				"id": 3034369,
+				"name": "Beauchamp",
+				"country": "FR",
+				"coord": {
+				  "lon": 2.2,
+				  "lat": 49.01667
+				}
+			  },
+			  {
+				"id": 3034374,
+				"name": "Beauce",
+				"country": "FR",
+				"coord": {
+				  "lon": -1.15804,
+				  "lat": 48.338902
+				}
+			  },
+			  {
+				"id": 3034376,
+				"name": "Beaucamps-le-Vieux",
+				"country": "FR",
+				"coord": {
+				  "lon": 1.78272,
+				  "lat": 49.84642
+				}
+			  },
+			  {
+				"id": 3034382,
+				"name": "Beaucaire",
+				"country": "FR",
+				"coord": {
+				  "lon": 4.64417,
+				  "lat": 43.80806
+				}
+			  },
+			  {
+				"id": 3034411,
+				"name": "Bazouges-sur-le-Loir",
+				"country": "FR",
+				"coord": {
+				  "lon": -0.16883,
+				  "lat": 47.689281
+				}
+			  },
+			  {
+				"id": 3034413,
+				"name": "Bazouges-la-Perouse",
+				"country": "FR",
+				"coord": {
+				  "lon": -1.57431,
+				  "lat": 48.42606
+				}
+			  },
+			  {
+				"id": 3034422,
+				"name": "Bazoges-en-Pareds",
+				"country": "FR",
+				"coord": {
+				  "lon": -0.91654,
+				  "lat": 46.657021
+				}
+			  },
+			  {
+				"id": 3034429,
+				"name": "Bazoches-les-Gallerandes",
+				"country": "FR",
+				"coord": {
+				  "lon": 2.04319,
+				  "lat": 48.165401
+				}
+			  },
+			  {
+				"id": 3034442,
+				"name": "Baziege",
+				"country": "FR",
+				"coord": {
+				  "lon": 1.61399,
+				  "lat": 43.45454
+				}
+			  },
+			  {
+				"id": 3034446,
+				"name": "Bazet",
+				"country": "FR",
+				"coord": {
+				  "lon": 0.06728,
+				  "lat": 43.291451
+				}
+			  },
+			  {
+				"id": 3034451,
+				"name": "Bazemont",
+				"country": "FR",
+				"coord": {
+				  "lon": 1.86651,
+				  "lat": 48.927261
+				}
+			  },
+			  {
+				"id": 3034454,
+				"name": "Bazeilles",
+				"country": "FR",
+				"coord": {
+				  "lon": 4.97752,
+				  "lat": 49.676498
+				}
+			  },
+			  {
+				"id": 3034461,
+				"name": "Bazancourt",
+				"country": "FR",
+				"coord": {
+				  "lon": 4.17051,
+				  "lat": 49.36562
+				}
+			  },
+			  {
+				"id": 3034463,
+				"name": "Bazainville",
+				"country": "FR",
+				"coord": {
+				  "lon": 1.66732,
+				  "lat": 48.804352
+				}
+                },
+                {
+                  "id": 5056943,
+                  "name": "Princeton",
+                  "country": "US",
+                  "coord": {
+                    "lon": -93.580498,
+                    "lat": 40.400841
+                  }
+                }],
+	"refresh_rate": 5
+}
